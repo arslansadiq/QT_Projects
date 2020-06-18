@@ -119,6 +119,16 @@ int main(int argn, char** args)
        
    }
 
+   //specially for pdf because one PDF I tested did pass the NULL test
+   if ( ((char(buffer[0]) == '%') && (char(buffer[1]) == 'P')) &&
+         ((char(buffer[2]) == 'D') &&(char(buffer[3]) == 'F')) )
+    {
+        std::cout<<"Binary File"<<std::endl;
+        binary = true;
+        return 0;
+    }
+    
+
    for (size_t i = 0; i < size; i++)
     {
         if ( ( (buffer[i] >= 9) && (buffer[i] <= 13) ) ||  
