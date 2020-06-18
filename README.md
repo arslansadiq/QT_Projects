@@ -1,4 +1,4 @@
 # QT_Projects
 
-#### Compile with:
-g++ -o checkNUll checkNull.cpp
+##### Compile file_check with:
+g++ -o fileCheck file_check.cpp
