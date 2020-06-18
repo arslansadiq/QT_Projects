@@ -1,14 +1,11 @@
 #include <algorithm>
 #include <fstream>
-#include <iostream>
-#include <list> 
+#include <iostream> 
 #include "vector"
 #include <string.h>
 
 #define BYTE_LENGTH 1024
 
-
-void printNestedList(std::list<std::list<int> > BYTE_ORDER_MARKS); 
 
 int main(int argn, char** args)
 {
