@@ -29,17 +29,17 @@ TEST_F(BinUtilsTest, testBinaryFiles)
 {
     std::string root_path =  TestConfig::TestData();
     
-    std::string binary_file1 = root_path + std::string("/") + "pdf_file.png";
+    std::string binary_file1 = root_path + std::string("/") + "pdf_file";
     std::string binary_file2 = root_path + std::string("/") + "png_file.png";
     std::string binary_file3 = root_path + std::string("/") + "word_file";
     std::string binary_file4 = root_path + std::string("/") + "mandelbrot.ppm";
     std::string binary_file5 = root_path + std::string("/") + "c++_exec";
 
-    EXPECT_EQ(true, Utils::is_binary(binary_file1));
-    EXPECT_EQ(true, Utils::is_binary(binary_file2));
-    EXPECT_EQ(true, Utils::is_binary(binary_file3));
-    EXPECT_EQ(true, Utils::is_binary(binary_file4));
-    EXPECT_EQ(true, Utils::is_binary(binary_file5));
+    EXPECT_TRUE(Utils::is_binary(binary_file1));
+    EXPECT_TRUE(Utils::is_binary(binary_file2));
+    EXPECT_TRUE(Utils::is_binary(binary_file3));
+    EXPECT_TRUE(Utils::is_binary(binary_file4));
+    EXPECT_TRUE(Utils::is_binary(binary_file5));
 
 }
 
@@ -52,7 +52,7 @@ TEST_F(BinUtilsTest, testTextFiles)
     std::string text_file1 = root_path + std::string("/") + "text_UTF-8.txt";
     std::string text_file2 = root_path + std::string("/") + "text_UTF-8-BOM.txt";
 
-    EXPECT_EQ(true, Utils::is_text(text_file1));
-    EXPECT_EQ(true, Utils::is_text(text_file2));
+    EXPECT_TRUE(Utils::is_text(text_file1));
+    EXPECT_TRUE(Utils::is_text(text_file2));
 
 }
